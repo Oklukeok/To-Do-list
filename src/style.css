@@ -1,0 +1,26 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.placeHolder {
+  width: 50%;
+  height: 50%;
+  box-shadow: 2px 4px 15px 0 #000;
+}
+
+.taskToDo {
+  display: flex;
+}
+
+.forminput {
+  border: 0;
+}
+
+button {
+  width: 100%;
+}
