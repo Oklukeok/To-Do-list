@@ -3,17 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
     <title>To do list!</title>
 </head>
 <body>
-    <div class="placeHolder">
-        <h1>Today's To Do</h1>
-        <form id="inputForm">
-            <div class="form">
-              <label for="title" hidden>Add to your list...</label>
-              <input class="forminput" type="text" id="titleInput" placeholder="Add to your list..." required>
-            </div>
-        </form>
-    </div>
+<!-- App Wrapper -->
+<main class="app">
+	
+	<!-- New Todo -->
+	<section class="create-todo">
+		
+		<form id="new-todo-form">
+			<h4>What's on your todo?</h4>
+			<input
+
+				type="text" 
+				placeholder="e.g. Get some milk"
+				name="content"
+				id="content" />
+				
+
+			<input type="submit" value="Add todo" />
+		</form>
+
+	</section>
+	<!-- End of New Todo -->
+
+	<!-- Todo List -->
+	<section class="todo-list">
+		<h3>TODO LIST</h3>
+		<div class="list" id="todo-list"></div>
+	</section>
+	<!-- End of Todo List -->
+
+</main>
+<!-- End of App Wrapper -->
+
+<!-- JS Import -->
+<script src="index.js" type="module"></script>
+<!-- End of JS Import -->
 </body>
 </html>

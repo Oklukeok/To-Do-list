@@ -2,7 +2,7 @@
 
 # To Do List
 
--Stage 1: List structure.
+-Stage 2: Add & remove.
 
 ## Built With
 

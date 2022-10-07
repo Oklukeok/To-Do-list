@@ -1,43 +1,26 @@
-import './style.css';
+import DisplayTodos, { todos } from './modules/toDo.js';
 
-const container = document.querySelector('.placeHolder');
+window.addEventListener('load', () => {
+  const newTodoForm = document.querySelector('#new-todo-form');
 
-const toDoArray = [
-  {
-    description: 'Wash the dishes',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Complete To Do list project',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Read the newspapper',
-    completed: false,
-    index: 3,
-  },
-];
+  newTodoForm.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-toDoArray.forEach((item) => {
-  const task = document.createElement('div');
-  task.classList.add('taskToDo');
-  container.appendChild(task);
+    const todo = {
+      description: e.target.elements.content.value,
+      completed: false,
+      id: todos.length + 1,
+    };
 
-  const checkTask = document.createElement('input');
-  checkTask.setAttribute('type', 'checkbox');
-  task.appendChild(checkTask);
+    todos.push(todo);
 
-  const taskName = document.createElement('p');
-  taskName.innerText = item.description;
-  task.appendChild(taskName);
+    localStorage.setItem('todos', JSON.stringify(todos));
 
-  const taskPick = document.createElement('p');
-  taskPick.innerText = '⁞';
-  task.appendChild(taskPick);
+    // Reset the form
+    e.target.reset();
+
+    DisplayTodos();
+  });
+
+  DisplayTodos();
 });
-
-const taskClear = document.createElement('button');
-taskClear.innerText = 'Clear all completed';
-container.appendChild(taskClear);
