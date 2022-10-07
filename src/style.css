@@ -7,10 +7,10 @@ body {
   font-family: sans-serif;
 }
 
-.placeHolder {
+main {
   width: 50%;
   height: 50%;
-  box-shadow: 2px 4px 15px 0 #000;
+  box-shadow: 2px 4px 15px 0 #999;
 }
 
 .taskToDo {
