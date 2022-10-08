@@ -9,7 +9,7 @@ body {
 
 main {
   width: 50%;
-  height: 50%;
+  min-height: 50%;
   box-shadow: 2px 4px 15px 0 #999;
 }
 
@@ -27,4 +27,26 @@ button {
 
 .manzana {
   color: red;
+}
+
+.edit {
+  width: 100px;
+}
+
+.delete {
+  width: 100px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: center;
+}
+
+#new-todo-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#new-todo-form h4 {
+  align-self: center;
 }

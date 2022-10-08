@@ -51,8 +51,6 @@ export default function DisplayTodos() {
       input.classList.add('completed');
       if (todo.completed) {
         todoItem.classList.add('completed');
-        
-        
       } else {
         todoItem.classList.remove('completed');
       }
@@ -82,14 +80,5 @@ export default function DisplayTodos() {
         localStorage.setItem('todos', JSON.stringify(todos));
       }
     });
-
-
-
-    
-
-
-
-
-
   });
 }

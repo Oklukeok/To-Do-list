@@ -1,3 +1,5 @@
+import './style.css';
+
 import DisplayTodos, { todos } from './modules/toDo.js';
 import clear from './modules/clear.js';
 
