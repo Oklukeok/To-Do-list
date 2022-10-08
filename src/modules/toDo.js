@@ -42,14 +42,17 @@ export default function DisplayTodos() {
 
     if (todo.completed) {
       todoItem.classList.add('completed');
+      content.innerHTML = `<input type="text" style="text-Decoration:line-through" value="${todo.description}" readonly>`;
     }
 
     input.addEventListener('change', (e) => {
       todo.completed = e.target.checked;
       localStorage.setItem('todos', JSON.stringify(todos));
-
+      input.classList.add('completed');
       if (todo.completed) {
         todoItem.classList.add('completed');
+        
+        
       } else {
         todoItem.classList.remove('completed');
       }
@@ -79,5 +82,14 @@ export default function DisplayTodos() {
         localStorage.setItem('todos', JSON.stringify(todos));
       }
     });
+
+
+
+    
+
+
+
+
+
   });
 }
