@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	
     <title>To do list!</title>
 </head>
 <body>
@@ -14,16 +14,18 @@
 	<section class="create-todo">
 		
 		<form id="new-todo-form">
-			<h4>What's on your todo?</h4>
-			<input
+			<h4>Today's To Do</h4>
+            <div>
+			    <input class="newInput1"
 
-				type="text" 
-				placeholder="e.g. Get some milk"
-				name="content"
-				id="content" />
+				    type="text" 
+				    placeholder="Add to your list..."
+				    name="content"
+				    id="content" />
 				
 
-			<input type="submit" value="Add todo" />
+			    <input class="newInput2" type="submit" value="+" />
+            </div>    
 		</form>
 
 	</section>
@@ -31,11 +33,13 @@
 
 	<!-- Todo List -->
 	<section class="todo-list">
-		<h3>TODO LIST</h3>
+		
 		<div class="list" id="todo-list"></div>
 	</section>
 	<!-- End of Todo List -->
-
+	<section id="clearAll">
+		<button id="ClearAllButton">Clear All Completed</button>
+	</section>
 </main>
 <!-- End of App Wrapper -->
 

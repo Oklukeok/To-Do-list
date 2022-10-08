@@ -1,4 +1,7 @@
+import './style.css';
+
 import DisplayTodos, { todos } from './modules/toDo.js';
+import clear from './modules/clear.js';
 
 window.addEventListener('load', () => {
   const newTodoForm = document.querySelector('#new-todo-form');
@@ -23,4 +26,11 @@ window.addEventListener('load', () => {
   });
 
   DisplayTodos();
+});
+
+const clearBtn = document.querySelector('#ClearAllButton');
+
+clearBtn.addEventListener('click', () => {
+  clear();
+  location.reload(); // eslint-disable-line
 });

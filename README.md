@@ -2,7 +2,7 @@
 
 # To Do List
 
--Stage 2: Add & remove.
+-Stage 3: Interactive List.
 
 ## Built With
 
