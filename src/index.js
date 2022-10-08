@@ -30,6 +30,5 @@ const clearBtn = document.querySelector('#ClearAllButton');
 
 clearBtn.addEventListener('click', () => {
   clear();
-  setInterval("location.reload()",100);
-  
+  location.reload(); // eslint-disable-line
 });
